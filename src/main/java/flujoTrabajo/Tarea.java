@@ -1,55 +1,36 @@
 package flujoTrabajo;
 
+import javax.swing.plaf.basic.BasicComboBoxUI;
+
 public class Tarea {
 
 	private String nombre;
-	private fases fase;
-	private FlujoTrabajo flujoTrabajo;
-	private Actividades actividad;
+	private String fase;
 
-	public Tarea(String nombre, fases fase, FlujoTrabajo flujoTrabajo, Actividades actividad) {
+	public Tarea(String nombre, String fase) {
 		this.nombre = nombre;
 		this.fase = fase;
-		this.flujoTrabajo = flujoTrabajo;
-		this.actividad = actividad;
+
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public fases getFase() {
+	public String getNombre() { return nombre; }
+
+	public String getFase() {
 		return fase;
 	}
 
-	public void setFase(fases fase) {
+	public void setFase(String fase) {
 		this.fase = fase;
 	}
 
-	public FlujoTrabajo getFlujoTrabajo() {
-		return flujoTrabajo;
-	}
-
-	public void setFlujoTrabajo(FlujoTrabajo flujoTrabajo) {
-		this.flujoTrabajo = flujoTrabajo;
-	}
-
-	public Actividades getActividad() {
-		return actividad;
-	}
-
-	public void setActividad(Actividades actividad) {
-		this.actividad = actividad;
-	}
 
 	@Override
 	public String toString() {
-		return "Tarea{" +
-				"nombre='" + nombre + '\'' +
-				'}';
+		return nombre;
 	}
 }

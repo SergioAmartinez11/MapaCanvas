@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.flujoDeTrabajoGUI">
-  <grid id="27dc6" binding="panelRaiz" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panelRaiz" layout-manager="GridLayoutManager" row-count="4" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="634" height="400"/>
@@ -26,40 +26,6 @@
           </component>
         </children>
       </grid>
-      <component id="7f52c" class="javax.swing.JButton" binding="botonAgregar">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Agregar Tarea"/>
-        </properties>
-      </component>
-      <component id="2e76d" class="javax.swing.JComboBox" binding="comboBoxArchivo">
-        <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <model>
-            <item value="Abrir"/>
-            <item value="Guardar"/>
-            <item value="Salir"/>
-            <item value="Nuevo"/>
-          </model>
-          <toolTipText value="Archivo"/>
-        </properties>
-      </component>
-      <component id="756c6" class="javax.swing.JList" binding="listaAtrasado">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-        </constraints>
-        <properties>
-          <dropMode value="INSERT"/>
-          <selectionBackground color="-5290699"/>
-          <toolTipText value="Atrasado"/>
-        </properties>
-      </component>
       <component id="c9a20" class="javax.swing.JList" binding="listaTrabajando">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -67,9 +33,10 @@
           </grid>
         </constraints>
         <properties>
-          <dropMode value="INSERT"/>
+          <dropMode value="USE_SELECTION"/>
           <model/>
           <selectionBackground color="-9722193"/>
+          <selectionMode value="0"/>
           <toolTipText value="Trabajando"/>
         </properties>
       </component>
@@ -80,9 +47,10 @@
           </grid>
         </constraints>
         <properties>
-          <dropMode value="INSERT"/>
+          <dropMode value="USE_SELECTION"/>
           <model/>
           <selectionBackground color="-5264067"/>
+          <selectionMode value="0"/>
           <toolTipText value="Prioridad"/>
         </properties>
       </component>
@@ -93,8 +61,9 @@
           </grid>
         </constraints>
         <properties>
-          <dropMode value="INSERT"/>
+          <dropMode value="USE_SELECTION"/>
           <selectionBackground color="-11292856"/>
+          <selectionMode value="0"/>
           <toolTipText value="Terminado"/>
         </properties>
       </component>
@@ -152,6 +121,66 @@
           </component>
         </children>
       </grid>
+      <component id="756c6" class="javax.swing.JList" binding="listaAtrasado">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <dropMode value="USE_SELECTION"/>
+          <selectionBackground color="-5290699"/>
+          <selectionMode value="0"/>
+          <toolTipText value="Atrasado"/>
+        </properties>
+      </component>
+      <component id="c5d50" class="javax.swing.JTextField" binding="descripcionTarea">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="7f52c" class="javax.swing.JButton" binding="botonAgregar">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Agregar Tarea"/>
+        </properties>
+      </component>
+      <component id="378b1" class="javax.swing.JComboBox" binding="comboBoxFase">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Atrasado"/>
+            <item value="Prioridad"/>
+            <item value="Trabajando"/>
+            <item value="Terminado"/>
+          </model>
+        </properties>
+      </component>
+      <component id="97c3f" class="javax.swing.JLabel" binding="labelDescripcion">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Descripcion de la tarea"/>
+        </properties>
+      </component>
+      <component id="563eb" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Fase"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
